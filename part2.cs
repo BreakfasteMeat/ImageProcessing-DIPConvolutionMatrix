@@ -41,6 +41,8 @@ namespace ImageProcessingActivity {
                     int dr = pixel.R - 0;
                     int dg = pixel.G - 255;
                     int db = pixel.B - 0;
+
+                    //See how far from the "Green" corner
                     double distance = Math.Sqrt((dr*dr)+(dg*dg)+(db*db));
 
                     if(distance < threshold) {
