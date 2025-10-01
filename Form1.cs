@@ -8,11 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
+
+
 namespace ImageProcessingActivity {
     public partial class Form1 : Form {
 
         part1 part1 = null;
         part2 part2 = null;
+        DIPConvolutionMatrix dipconvmatr = null;
 
         public Form1() {
             InitializeComponent();
@@ -43,6 +46,13 @@ namespace ImageProcessingActivity {
                 part2 = new part2();
             }
             changePanel(part2);
+        }
+
+        private void bitmapFiltersToolStripMenuItem_Click(object sender, EventArgs e) {
+            if(dipconvmatr == null ) {
+                dipconvmatr = new DIPConvolutionMatrix();
+            }
+            changePanel(dipconvmatr);
         }
     }
 }
